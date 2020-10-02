@@ -9,6 +9,7 @@
     "firebase": "^7.9.3-0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-images-upload": "^1.2.8",
     "react-scripts": "3.4.1"
   },
   "scripts": {

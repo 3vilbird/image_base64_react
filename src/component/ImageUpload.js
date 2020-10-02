@@ -31,6 +31,17 @@ export default class ImageUpload extends Component {
   fileUploadHandler = async (e) => {
     console.log(e.target.files[0]);
 
+    let reader = new FileReader();
+
+    reader.onloadend = () => {
+      this.setState({
+        file: reader.result,
+        showImage: true,
+      });
+    };
+
+    reader.readAsDataURL(e.target.files[0]);
+
     const data = await this.base64convereter(e.target.files[0]);
 
     console.log("====================================");
